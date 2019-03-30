@@ -1,18 +1,9 @@
 'use strict';
 
-//変数　let var
+// console.log('5' * 3);
+// console.log('5' - 3);
 
-let price = 500;
+// console.log('5' + 3);
+console.log(parseInt('5',10) + 3);
 
-price = price+100; //600
-price += 100;//700
-
-price *= 2 //price = price *2 //1400
-
-price = price + 1;// 1401
-price += 1;//1402
-price++;//1403
-
-price--; //price -= 1 //1402
-
-console.log(price);
+console.log(parseInt('hello',10) + 3);
