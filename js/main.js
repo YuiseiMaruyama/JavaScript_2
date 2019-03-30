@@ -1,13 +1,31 @@
 'use strict';
 
-const score = 40;
+const signal = 'pink';
 
-
-// if(score >= 80){
-//     console.log('Great!');
-// }else{
-//     console.log('OK');
+// if(signal=== 'red'){
+//     console.log('stop');
+// }else if(signal=== 'yallow'){
+//     console.log('causion');
+// }else if(signal=== 'blue'){
+//     console.log('go');
 // }
 
-// 条件式 ? trueの処理 : falseの処理
-score >= 80 ? console.log('Great!') : console.log('OK');
+switch(signal){
+    case 'red':
+    console.log('stop');
+    break;
+
+    case 'yellow':
+    console.log('causion');
+    break;
+
+    case 'blue':
+    case'green':
+    console.log('go');
+    break;
+    default:
+    console.log('wrong signal');
+    break;
+}
+
+
