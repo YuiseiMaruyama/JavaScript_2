@@ -1,19 +1,19 @@
 'use strict';
 
-// Scope
+// #09 配列の要素を操作してみよう
 
 {
-//    let x = 1;
-//    let y = x;
-//    x = 5;
-//    console.log(x); //5
-//    console.log(y); //1
+    const a = [1,5,9];
 
-   let x = [1,2];
-   let y = x;
-   x[0] = 5;
-   console.log(x); //[5,2]
-   console.log(y); //[1,2]だが実際は[5,2] なぜなら　xの値ではなく値への参照がコピーされる
+    //add
+    // a.unshift(100); //先頭に100追加
+    // a.push(200,300); //後ろにに200、300追加
+
+    // console.log(a);
+
+    //remove
+    a.shift(); //先頭から1を削除
+    a.pop();   //後ろから9を削除
+    console.log(a);//[5]
+    
 }
-
-
