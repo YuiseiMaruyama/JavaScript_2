@@ -1,21 +1,24 @@
 'use strict';
 
-//  #11 forEachを使ってみよう
+//  #12 map､filterを使ってみよう
 
 {
     const a = [1,5,10,100];
 
-    // for(let i = 0; i <= 2; i++){
-    //     for(let i = 0; i < a.length; i++){
-    //     console.log(a[i]);
-    // }
+    // const b = [];
+    // a.forEach(item => {
+    //     b.push(item * 2);//aのそれぞれの要素を2倍にしたものをbにpush
+    // });
+    // console.log(b);
 
-    // a.forEach(item => { //aの配列から1つずつ要素をitemに渡す
-    //     console.log(item);
+    // const b = a.map(item =>{ //aの全ての要素をmap()内の関数のに適用して返す
+    //     return item * 2;
     // });
 
-    a.forEach((item,  index)=> { //aの配列から1つずつ要素をitemに渡す
-        console.log(`${index}:${item}`);
-    });
+    // const b = a.map(item => item * 2); 
+    // console.log(b);
+
+    const b = a.filter(item => item % 2 === 0);
+    console.log(b);
    
 }
