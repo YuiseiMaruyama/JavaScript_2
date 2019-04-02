@@ -1,12 +1,17 @@
 'use strict';
 
-//  #03 querySelectorを使ってみよう
+//  #04 親要素､子要素を指定してみよう
 
 {
-    document.querySelector('h1').textContent = 'H1!';
+    const ul = document.querySelector('ul');
 
-    // nth-child(odd) 奇数番目の要素指定
-    document.querySelectorAll('li:nth-child(odd)').forEach(li => { // HTML内のliを全て適用
-        li.textContent = 'li!'
-    });
+    // console.log(ul.parentNode);// body
+    // console.log(ul.children);// li
+
+    // console.log(ul.children[0]);// <li>item 0</li>
+
+    for(let i = 0; i<ul.children.length; i++){
+        console.log(ul.children[i].textContent);
+    }
+
 }
