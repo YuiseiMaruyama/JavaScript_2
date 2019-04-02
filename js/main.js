@@ -1,14 +1,17 @@
 'use strict';
 
-//   #14 イベントオブジェクトを扱ってみよう
-// マウスの座標
+//   #15 preventDefaultを使ってみよう
+
 
 
 {
-    const div = document.querySelector('div');
+    const a = document.querySelector('a');
+    const span = document.querySelector('span');
 
-    document.addEventListener('mousemove', e =>{
-        div.textContent = `${e.clientX}:${e.clientY}`;
+    a.addEventListener('click', e =>{
+        e.preventDefault();// 要素の規定の動作をキャンセルする
+        a.classList.add('hidden');
+        span.classList.remove('hidden');
     });
 
 }
