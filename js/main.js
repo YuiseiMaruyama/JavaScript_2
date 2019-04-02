@@ -1,12 +1,14 @@
 'use strict';
 
-//   #13 イベントリスナーを使ってみよう
+//   #14 イベントオブジェクトを扱ってみよう
+// マウスの座標
+
 
 {
-    const button = document.querySelector('button');
+    const div = document.querySelector('div');
 
-    button.addEventListener('dblclick', () =>{
-        console.log('clicked');
+    document.addEventListener('mousemove', e =>{
+        div.textContent = `${e.clientX}:${e.clientY}`;
     });
 
 }
