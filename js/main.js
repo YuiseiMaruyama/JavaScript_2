@@ -1,11 +1,7 @@
 'use strict';
 
-//  #01 DOMを扱ってみよう
-
+//  #02 要素を指定してみよう
 
 {
-// Document Object Model / DOM
-
-document.body.textContent = 'Hello';
-document.title = 'Changed';
+    document.getElementById('target').textContent = 'Changed!';
 }
