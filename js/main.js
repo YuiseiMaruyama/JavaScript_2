@@ -1,6 +1,6 @@
 'use strict';
 
-//   #09 要素を生成してみよう
+//   #10 要素のコピー､削除をしてみよう
 
 {
   const h1 = document.createElement('h1');//HTMLにh1を作成
@@ -13,6 +13,14 @@
 
   const h2 = document.createElement('h2');
   h2.textContent = 'Sub Title';
-  document.body.insertBefore(h2,p);//bodyのpの前にh2を追加
+
+  //insertBefore()でbodyのpの前にh2を追加
+  document.body.insertBefore(h2,p);
+
+//   const copy = p.cloneNode(true);//p要素をコピー
+  const copy = p.cloneNode(false);//空のp要素をコピー
+  document.body.insertBefore(copy,h2);
+
+  document.body.removeChild(h2);//h2削除
 
 }
