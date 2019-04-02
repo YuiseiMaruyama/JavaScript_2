@@ -1,12 +1,11 @@
 'use strict';
 
-//   #06 カスタムデータ属性を扱ってみよう
+//   #07 クラス属性を操作してみよう
 
 {
-   //HTMLのカスタムデータ属性
-   const h1 = document.querySelector('h1');
+   const div = document.querySelector('div');
 
-   console.log(h1.dataset.appId); //カスタムデータの取得には"dataset"の記述が必要
-   h1.dataset.message = 'this is custom message';
+//    div.className = 'border-pink';//HTMLのdivのclass名がbox -> border-pinkに書き換わってしまう
+   div.className = ' box border-pink'; // boxクラスも書いておく
 
 }
