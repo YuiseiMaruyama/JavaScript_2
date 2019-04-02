@@ -1,17 +1,11 @@
 'use strict';
 
-//  #19 Dateオブジェクトを操作してみよう
+//  #20 alert､confirmを使ってみよう
 
 {
-    //Date
-    // const d = new Date(2018,11); // 2018/12/01 00:00:00
-    // d.setHours(10,20,30); // 2018/12/01 10:20:30
-    // d.setDate(32); // 2019/01/01 10:20:30
-    // d.setDate(d.getDate()+3); // 2019/01/04 10:20:30
+    // window.alert('hello');
+    // alert('hello');
 
-    // console.log(d); //UTF 1970/01/01 00:00:00
-
-    const d1 = new Date(2018,11,1);
-    const d2 = new Date(2018,11,10);
-    console.log((d2-d1) / (24*60*60*1000)); // 24h * 60min * 60sec * 1000millisec
+    const answer = confirm('Are you ready?'); // okとキャンセルがつく
+    console.log(answer);
 }
