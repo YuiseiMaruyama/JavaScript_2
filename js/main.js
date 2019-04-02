@@ -1,15 +1,21 @@
 'use strict';
 
-//  #10 spliceで配列を変更してみよう
+//  #11 forEachを使ってみよう
 
 {
-    const a = [1,5,10];
+    const a = [1,5,10,100];
 
-    a.splice(2, 0, 6,7);// (配列を変化させる要素の添字,削除する数,追加する要素)
-    console.log(a);//[1, 5, 6, 7, 10]
+    // for(let i = 0; i <= 2; i++){
+    //     for(let i = 0; i < a.length; i++){
+    //     console.log(a[i]);
+    // }
 
-    const removed = a.splice(1, 2);// (配列を変化させる要素の添字,削除する数,追加する要素)
-    console.log(a);//[1, 7, 10]
-    console.log(removed);//5,6
-    
+    // a.forEach(item => { //aの配列から1つずつ要素をitemに渡す
+    //     console.log(item);
+    // });
+
+    a.forEach((item,  index)=> { //aの配列から1つずつ要素をitemに渡す
+        console.log(`${index}:${item}`);
+    });
+   
 }
