@@ -3,24 +3,14 @@
 //   #10 要素のコピー､削除をしてみよう
 
 {
-  const h1 = document.createElement('h1');//HTMLにh1を作成
-  h1.textContent = 'Title';
-  document.body.appendChild(h1);//bodyの最後にh1を追加
+  const text = document.querySelector('input[type="text"]');
+  const textarea = document.querySelector('textarea');
 
-  const p = document.createElement('p');//HTMLにpを作成
-  p.textContent = 'hello.hello,hello';
-  document.body.appendChild(p);//bodyの最後にpを追加
+  console.log(text.value);
+  console.log(textarea.value);
 
-  const h2 = document.createElement('h2');
-  h2.textContent = 'Sub Title';
-
-  //insertBefore()でbodyのpの前にh2を追加
-  document.body.insertBefore(h2,p);
-
-//   const copy = p.cloneNode(true);//p要素をコピー
-  const copy = p.cloneNode(false);//空のp要素をコピー
-  document.body.insertBefore(copy,h2);
-
-  document.body.removeChild(h2);//h2削除
+//   text.focus();//textのボックスの枠が青くなる
+  text.select();//中のtextに青いマーカーが入る
+  text.disabled = true;//入力できないように設定
 
 }
