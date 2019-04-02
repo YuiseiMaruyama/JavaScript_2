@@ -1,21 +1,20 @@
 'use strict';
 
-//  #22 setTimeoutを使ってみよう
-// setIntervalは処理が遅延すると次の処理と重なる
-// setTimeoutは完全に終了してから発火するのでシステムに負荷がかかりづらい
+//  #23 例外処理を使ってみよう
 
 
 {
-   let i =0;
-    const showTime = () =>{
-        console.log(new Date());
-        let timeId = setTimeout(showTime,1000);
-        i++;
-        if(i > 2){
-            clearTimeout(timeId);
-        }
-    };
-    
-    // setTimeout(showTime,1000);// 指定した時間の後に1回だけ処理を実行する
-    showTime();
+//    const a = 'hello';
+   const a = 5;
+
+    try{    //エラーが起きそうな場所をtryで囲う
+        console.log(a.toUpperCase());
+    } catch(e){ //catchの中にエラーの処理をかき、chatchの引数にerrorの'e'を渡すことでJavaScriptがエラー処理だと認識
+        console.log(e.message);
+    }
+
+
+
+   
+   console.log('finish');
 }
