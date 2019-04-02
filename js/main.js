@@ -1,21 +1,23 @@
 'use strict';
 
-//  #13 オブジェクトを操作してみよう
+//  #14 スプレッド演算子を使ってみよう
 
 {
     //Object
 
-    const o = {
-        a: 1,
-        b: 2,
-    };
-
-    // console.log(Object.keys(o));//['a','b']
-    // console.log(Object.values(o));//[1,2]
-    // console.log(Object.entries(o));//[['a',1],['b',2]]
-
-    Object.keys(o).forEach(key =>{
-        console.log(`${key}:${o[key]}`);//keyとkeyに対する値を表示
-    });
+    // const a = [10,20];
+    // const b = [1,2,...a];//aのindex(10,20)がbで展開される
+    // console.log(b);
    
+    // a[0] = 100;
+    // console.log(b);
+
+    // const a = [10,20];
+    // const sum = (a,b) => a + b;
+    // console.log(sum); //(a,b) => a + b
+    // console.log(sum(...a)); //30
+
+    const o1 = {a:1};
+    const o2 = {...o1,b:2};
+    console.log(o2); //{a: 1, b: 2}
 }
