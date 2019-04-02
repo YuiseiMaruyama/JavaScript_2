@@ -1,17 +1,15 @@
 'use strict';
 
-//  #04 親要素､子要素を指定してみよう
+//  #05 要素の属性を操作してみよう
 
 {
-    const ul = document.querySelector('ul');
+    const h1 = document.querySelector('h1');
 
-    // console.log(ul.parentNode);// body
-    // console.log(ul.children);// li
 
-    // console.log(ul.children[0]);// <li>item 0</li>
+    // console.log(h1.title);
+    // h1.title = "Changed";
 
-    for(let i = 0; i<ul.children.length; i++){
-        console.log(ul.children[i].textContent);
-    }
+    h1.style.color = 'gray'; //h1にstyleを付与
+    h1.style.backgroundColor = 'pink';
 
 }
