@@ -1,15 +1,12 @@
 'use strict';
 
-//  #05 要素の属性を操作してみよう
+//   #06 カスタムデータ属性を扱ってみよう
 
 {
-    const h1 = document.querySelector('h1');
+   //HTMLのカスタムデータ属性
+   const h1 = document.querySelector('h1');
 
-
-    // console.log(h1.title);
-    // h1.title = "Changed";
-
-    h1.style.color = 'gray'; //h1にstyleを付与
-    h1.style.backgroundColor = 'pink';
+   console.log(h1.dataset.appId); //カスタムデータの取得には"dataset"の記述が必要
+   h1.dataset.message = 'this is custom message';
 
 }
