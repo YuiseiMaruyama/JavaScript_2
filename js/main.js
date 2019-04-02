@@ -1,12 +1,10 @@
 'use strict';
 
-//  #16 文字列を操作してみよう
+//  #17 Mathオブジェクトを使ってみよう
 
 {
-    
-    const str = 'hello';
-    // console.log(str.length);//5
-    // console.log(str.substring(2,4));//(start,end) // ll
-    console.log(str[1]);//e
+    //Math
+    console.log(Math.PI);
+    console.log(Math.floor(Math.random()*6+1));//0-0.999....まで
     
 }
