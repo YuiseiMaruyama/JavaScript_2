@@ -1,19 +1,21 @@
 'use strict';
 
-//  #21 setIntervalで繰り返し処理をしよう
+//  #22 setTimeoutを使ってみよう
+// setIntervalは処理が遅延すると次の処理と重なる
+// setTimeoutは完全に終了してから発火するのでシステムに負荷がかかりづらい
+
+
 {
-    let i = 0;
-
-
+   let i =0;
     const showTime = () =>{
         console.log(new Date());
+        let timeId = setTimeout(showTime,1000);
         i++;
         if(i > 2){
-            clearInterval(timerId);
+            clearTimeout(timeId);
         }
     };
-    // setInterval(showTime,ミリ秒); // showTime()だと関数式showTimeを実行した結果をsetIntervalに代入することになる
-
-
-    let timerId =setInterval(showTime,1000);
+    
+    // setTimeout(showTime,1000);// 指定した時間の後に1回だけ処理を実行する
+    showTime();
 }
